@@ -1,0 +1,100 @@
+<div class="page-container my-event">
+  <div class="page-breadcrumb">
+    <nz-breadcrumb>
+      <nz-breadcrumb-item>您好！超级管理员！欢迎登陆！</nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </div>
+  
+  <div class="page-content">
+    <div class="section collect">
+      <div class="head">
+        <h2>
+          <img src="assets/images/common/collect.png" alt="folder">
+          <span class="name">我的收藏</span>
+        </h2>
+      </div>
+      <div class="body">
+        <h3>重点产业人才计划</h3>
+        <div class="list" nz-row nzGutter="20">
+          <div
+            class="item-wrapper"
+            nz-col
+            nzXs="8" nzMd="8" nzLg="8" nzXl="6" nzXXl="4"
+            *ngFor="let item of list1; let i = index"
+          >
+            <a class="item">
+              <span class="icon">
+                <img [src]="item.icon" alt="icon" />
+              </span>
+              <div class="info">
+                <p class="name">{{ item.name }}</p>
+                <p class="subTitle">{{ item.subtitle }}</p>
+              </div>
+              <i *ngIf="(i+1)%6 !== 0" class="line"></i>
+            </a>
+          </div>
+        </div>
+
+        <h3>校园引才</h3>
+        <div class="list" nz-row nzGutter="20">
+          <div
+            class="item-wrapper"
+            nz-col
+            nzXs="8" nzMd="8" nzLg="8" nzXl="6" nzXXl="4"
+            *ngFor="let item of list2; let i = index"
+          >
+            <a class="item">
+              <span class="icon">
+                <img [src]="item.icon" alt="icon" />
+              </span>
+              <div class="info">
+                <p class="name">{{ item.name }}</p>
+                <p class="subTitle">{{ item.subtitle }}</p>
+              </div>
+              <i *ngIf="(i+1)%6 !== 0" class="line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section todo">
+      <div class="head">
+        <h2>
+          <img src="assets/images/common/todo.png" alt="todo">
+          <span class="name">我的待办</span>
+        </h2>
+      </div>
+
+      <div class="body">
+        <div class="list">
+          <div
+            nz-row 
+            nzGutter="10"
+            *ngFor="let row of todoList"
+          >
+            <div class="item-wrapper" nz-col nzSpan="12" *ngFor="let item of row">
+              <a class="item">
+                <p class="title">
+                  <span class="text">{{ item.title }}</span>
+                  <span *ngIf="item.isNew" class="new">
+                    <em>new</em>
+                    <i></i>
+                  </span>
+                </p>
+                <p class="date">{{ item.date }}</p>
+                <p class="tags">
+                  <span *ngFor="let tag of item.tags">
+                    {{tag}}
+                  </span>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
