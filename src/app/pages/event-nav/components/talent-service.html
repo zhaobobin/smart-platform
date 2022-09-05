@@ -1,0 +1,94 @@
+<div class="page-content talent-service">
+  
+  <div class="section section1">
+    <div class="head">
+      <h2>
+        <img src="assets/images/navigation/title_icon01.png" alt="folder">
+        <span class="name">重点产业人才计划</span>
+      </h2>
+    </div>
+
+    <div class="body">
+      <h3>安家待遇管理</h3>
+      <div class="list" nz-row nzGutter="20">
+        <div
+          class="item-wrapper"
+          nz-col
+          nzXs="8" nzMd="8" nzLg="8" nzXl="6" nzXXl="4"
+          *ngFor="let item of list1; let i = index"
+        >
+          <a class="item">
+            <span class="icon">
+              <img [src]="item.icon" alt="icon" />
+            </span>
+            <div class="info">
+              <p class="name">{{ item.name }}</p>
+              <p class="subTitle">{{ item.subtitle }}</p>
+            </div>
+            <i *ngIf="(i+1)%6 !== 0" class="line"></i>
+          </a>
+        </div>
+      </div>
+
+      <h3>安家待遇管理</h3>
+      <div class="list" nz-row nzGutter="20">
+        <div
+          class="item-wrapper"
+          nz-col
+          nzXs="8" nzMd="8" nzLg="8" nzXl="6" nzXXl="4"
+          *ngFor="let item of list2; let i = index"
+        >
+          <a class="item">
+            <span class="icon">
+              <img [src]="item.icon" alt="icon" />
+            </span>
+            <div class="info">
+              <p class="name">{{ item.name }}</p>
+              <p class="subTitle">{{ item.subtitle }}</p>
+            </div>
+            <i *ngIf="(i+1)%6 !== 0" class="line"></i>
+          </a>
+        </div>
+      </div>
+
+      <h3>安家综合查询</h3>
+    </div>
+  </div>
+
+  <div class="section section2">
+    <div class="head">
+      <h2>
+        <img src="assets/images/navigation/title_icon02.png" alt="folder">
+        <span class="name">校园引才</span>
+      </h2>
+    </div>
+
+    <div class="body">
+      <h3>校园引才申报管理</h3>
+      <div class="list" nz-row nzGutter="20">
+        <div
+          class="item-wrapper"
+          nz-col
+          nzXs="8" nzMd="8" nzLg="8" nzXl="6" nzXXl="4"
+          *ngFor="let item of list1; let i = index"
+        >
+          <a class="item">
+            <span class="icon">
+              <img [src]="item.icon" alt="icon" />
+            </span>
+            <div class="info">
+              <p class="name">{{ item.name }}</p>
+              <p class="subTitle">{{ item.subtitle }}</p>
+            </div>
+            <i *ngIf="(i+1)%6 !== 0" class="line"></i>
+          </a>
+        </div>
+      </div>
+
+      <h3>校园引才申报管理</h3>
+
+      <h3>校园引才申报管理</h3>
+    </div>
+  </div>
+
+</div>

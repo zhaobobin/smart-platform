@@ -27,6 +27,8 @@ import { NzTreeModule } from 'ng-zorro-antd/tree';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzTransferModule } from 'ng-zorro-antd/transfer';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
+import { NzBackTopModule } from 'ng-zorro-antd/back-top';
+import { NzAffixModule } from 'ng-zorro-antd/affix';
 
 import { NotFoundComponent } from './pages/other/not-found.component';
 
@@ -37,6 +39,11 @@ import { AuthResetComponent } from './auth/reset/reset.component';
 import { PagesComponent } from './pages/pages.component';
 import { MyEventComponent } from './pages/my-event/my-event.component';
 import { EventNavComponent } from './pages/event-nav/event-nav.component';
+import { PublicInformation } from './pages/event-nav/components/public-information';
+import { TalentService } from './pages/event-nav/components/talent-service';
+import { SocialSecurity } from './pages/event-nav/components/social-security';
+import { IntegratedManagement } from './pages/event-nav/components/integrated-management';
+import { LaborRelations } from './pages/event-nav/components/labor-relations';
 
 registerLocaleData(en);
 
@@ -51,6 +58,11 @@ registerLocaleData(en);
     PagesComponent,
     MyEventComponent,
     EventNavComponent,
+    PublicInformation,
+    TalentService,
+    SocialSecurity,
+    IntegratedManagement,
+    LaborRelations,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +85,9 @@ registerLocaleData(en);
     NzTreeModule,
     NzBreadCrumbModule,
     NzTransferModule,
-    NzSkeletonModule
+    NzSkeletonModule,
+    NzBackTopModule,
+    NzAffixModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

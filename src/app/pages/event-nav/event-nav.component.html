@@ -1,11 +1,33 @@
-<div class="page-container">
+<div class="page-container navigation-container">
   <div class="page-breadcrumb">
     <nz-breadcrumb>
       <nz-breadcrumb-item>您好！超级管理员！欢迎登陆！</nz-breadcrumb-item>
     </nz-breadcrumb>
+    <div class="search-wrapper">
+      <nz-input-group nzPrefixIcon="search">
+        <input nz-input placeholder="输入事项代码或名称进行查询" [(ngModel)]="searchValue" (change)="search()" />
+      </nz-input-group>
+    </div>
+  </div>
+
+  <div class="menus">
+    <nz-affix [nzOffsetTop]="60">
+      <nav>
+        <a 
+          *ngFor="let menu of menus"
+          [routerLink]="menu.path" 
+          routerLinkActive="active"
+          (click)="handleClickMenu(menu.path)"
+          [ngClass]="{'active': currentUrl === menu.path}"
+        >
+          <span class="icon">
+            <img [src]="currentUrl === menu.path ? menu.active : menu.icon" alt="icon">
+          </span>
+          <span class="name">{{menu.name}}</span>
+        </a>
+      </nav>
+    </nz-affix>
   </div>
   
-  <div class="page-content">
-    event-nav
-  </div>
+  <router-outlet></router-outlet>
 </div>

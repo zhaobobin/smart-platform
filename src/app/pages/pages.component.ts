@@ -20,14 +20,12 @@ export class PagesComponent {
   menus = [
     {
       name: '我的事项',
-      icon: 'assets/images/common/menu_icon11.png',
-      active: 'assets/images/common/menu_icon12.png',
+      icon: 'assets/images/common/menu01.png',
       path: '/pages/my-event',
     },
     {
       name: '事项导航',
-      icon: 'assets/images/common/menu_icon21.png',
-      active: 'assets/images/common/menu_icon22.png',
+      icon: 'assets/images/common/menu02.png',
       path: '/pages/event-nav',
     },
   ];

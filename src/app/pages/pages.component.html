@@ -17,7 +17,7 @@
               (click)="handleClickMenu(item.path)"
             >
               <span class="icon">
-                <img [src]="currentUrl === item.path ? item.active : item.icon" alt="active">
+                <img [src]="item.icon" alt="active">
               </span>
               <span class="name">{{ item.name }}</span>
             </a>
@@ -35,5 +35,13 @@
     </div>
     <div nz-col nzMd="0" nzLg="1" nzXl="1" nzXXl="1"></div>
   </div>
+
+  <nz-back-top [nzTemplate]="backTpl" [nzVisibilityHeight]="200">
+    <ng-template #backTpl>
+      <div class="ant-back-top-inner">
+        <img src="assets/images/common/backtop.png" width="33px" height="auto" alt="backtop">
+      </div>
+    </ng-template>
+  </nz-back-top>
 
 </div>
